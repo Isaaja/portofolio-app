@@ -112,7 +112,7 @@ const Navigation = () => {
                   isMobile ? "my-2" : ""
                 } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:text-orange-400 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 text-accents-300 dark:text-slate-400`}
               >
-                <li>Tentang Saya</li>
+                <li>About Me</li>
               </a>
               <a
                 href="#skills"
@@ -123,28 +123,12 @@ const Navigation = () => {
                 <li>Skills</li>
               </a>
               <a
-                href="#portfolio"
+                href="#projects"
                 className={`group mx-2 ${
                   isMobile ? "my-2" : ""
                 } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:text-orange-400 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 text-accents-300 dark:text-slate-400`}
               >
-                <li>Portofolio</li>
-              </a>
-              <a
-                href="#experience"
-                className={`group mx-2 ${
-                  isMobile ? "my-2" : ""
-                } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:text-orange-400 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 text-accents-300 dark:text-slate-400`}
-              >
-                <li>Pengalaman</li>
-              </a>
-              <a
-                href="#education"
-                className={`group mx-2 ${
-                  isMobile ? "my-2" : ""
-                } flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 hover:text-orange-400 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 text-accents-300 dark:text-slate-400`}
-              >
-                <li>Pendidikan</li>
+                <li>Project</li>
               </a>
             </ul>
           </nav>
