@@ -17,7 +17,7 @@ const ProjectsSection = ({ portos }) => {
                 Project
               </h4>
               <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-                Project Terbaru
+                All Projects
               </h2>
             </div>
           </div>
