@@ -9,17 +9,6 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const tags = [
-  { title: "Programming", target: "/blog/tag/programming" },
-  { title: "Cloud", target: "/blog/tag/cloud" },
-  { title: "DevOps", target: "/blog/tag/devops" },
-  { title: "SysAdmin", target: "/blog/tag/sysadmin" },
-  { title: "Networking", target: "/blog/tag/networking" },
-  { title: "Linux", target: "/blog/tag/linux" },
-  { title: "Git", target: "/blog/tag/git" },
-  { title: "Setup", target: "/blog/tag/setup" },
-];
-
 const Footer = () => {
   const [menus, setMenus] = useState([]);
   const pathName = usePathname();
@@ -189,22 +178,6 @@ const Footer = () => {
                 <h3 className="leading text-xl font-bold dark:text-white">
                   Tag
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {tags.map((tag, index) => (
-                    <li key={index}>
-                      <a
-                        className={`text-base leading-6 ${
-                          pathName === tag.target
-                            ? "text-primary"
-                            : "text-slate-500 dark:text-slate-400"
-                        } hover:text-primary dark:hover:text-primary`}
-                        href={tag.target}
-                      >
-                        {tag.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </div>

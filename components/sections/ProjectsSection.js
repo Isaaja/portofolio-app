@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,34 +17,13 @@ const ProjectsSection = ({ portos }) => {
               <h4 className="mb-2 text-lg font-semibold uppercase text-primary">
                 Project
               </h4>
-              <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+              <h2 className="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
                 All Projects
               </h2>
             </div>
           </div>
-          <div className="w-full px-4 lg:w-1/2 mb-5">
-            <p className="text-medium font-medium text-secondary md:text-lg">
-              Saya dengan senang hati membagikan perjalanan dan pencapaian
-              terbaru saya dalam dunia teknologi. Setiap project yang saya
-              bagikan dibawah ini mewakili komitmen saya dalam mempelajari suatu
-              teknologi sehingga dapat menciptakan suatu solusi yang inovatif
-              dan berdampak.
-            </p>
-          </div>
-
-          <div className="w-full px-4 lg:w-1/2">
-            <p className="text-medium font-medium text-secondary md:text-lg">
-              Dalam setiap proyek, saya selalu berusaha untuk menggabungkan
-              kreativitas dengan pemahaman teknis yang mendalam. Saya percaya
-              bahwa teknologi adalah sarana untuk mewujudkan ide-ide luar biasa
-              dan mengatasi tantangan yang kompleks. Proyek-proyek ini tidak
-              hanya merupakan hasil dari kerja keras saya, tetapi juga
-              kolaborasi dengan rekan tim yang luar biasa.
-            </p>
-          </div>
         </div>
-
-        <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24 mt-20 px-4">
+        <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24 px-4">
           {portos.map((porto, index) => (
             <div key={index}>
               <Link href={porto.link} target="_blank">
