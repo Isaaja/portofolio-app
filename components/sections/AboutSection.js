@@ -9,7 +9,7 @@ const AboutSection = () => {
     {
       year: "2019 - 2022",
       title: "SMAN 1 Pati",
-      desc: "MIPA - Grade 90",
+      desc: "MIPA - Grade 95",
     },
   ];
 
