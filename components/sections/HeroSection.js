@@ -165,9 +165,10 @@ const HeroSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="mb-10 font-medium leading-relaxed text-accents-300 dark:text-white/80 w-96">
-                I'm passionate about building software that solves real-world
-                problems.
+              <p className="mb-10 font-medium leading-relaxed text-accents-300 dark:text-white/80 w-3/4 text-justify">
+                I'm a fullstack developer passionate about building modern web
+                applications. I enjoy learning new technologies and tackling
+                innovative challenges.
               </p>
 
               {/* Action Buttons */}

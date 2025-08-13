@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaLinkedin,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -43,7 +44,7 @@ const Footer = () => {
     <footer className="relative w-full border-t border-dark/20 dark:border-white/20 pt-12 transition duration-300 ease-in-out dark:bg-dark dark:opacity-90 lg:pt-20">
       <div className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
         <div
-          className="aspect-[1500/632] w-[69.25rem] flex-none bg-gradient-to-r from-cyan-600 to-cyan-800 opacity-25 dark:block"
+          className="aspect-[1500/632] w-[69.25rem] flex-none bg-gradient-to-r from-orange-500 to-orange-800 opacity-25 dark:block"
           style={{
             clipPath:
               "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
@@ -111,6 +112,18 @@ const Footer = () => {
                 <FaLinkedin className="h-6 w-6" />
                 <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
                   LinkedIn
+                </span>
+              </a>
+
+              {/* Whatsapp */}
+              <a
+                href="https://wa.me/+6285150715156"
+                target="_blank"
+                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+              >
+                <FaWhatsapp className="h-6 w-6" />
+                <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
+                  Whatsapp
                 </span>
               </a>
             </div>
@@ -182,11 +195,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16 flex items-center justify-center border-t border-dark pt-8 dark:border-white/10 sm:mt-20 lg:mt-24">
+        {/* <div className="mt-16 flex items-center justify-center border-t border-dark pt-8 dark:border-white/10 sm:mt-20 lg:mt-24">
           <p className="text-accents-300 dark:text-white/80 text-xs leading-5">
             © Copyright {new Date().getFullYear()} - Isa Iant Maulana
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
