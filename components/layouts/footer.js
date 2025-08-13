@@ -36,6 +36,16 @@ const Footer = () => {
     }
   };
 
+  const handleSmoothScroll = (sectionId) => {
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   useEffect(() => {
     fetchData();
   });
@@ -120,23 +130,57 @@ const Footer = () => {
             <div className="gap-8">
               <div>
                 <h3 className="leading text-xl font-bold dark:text-white">
-                  Tautan
+                  Sitemap
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {menus.map((menu, index) => (
-                    <li key={index}>
-                      <Link
-                        className={`text-base leading-6 ${
-                          pathName === menu.target
-                            ? "text-primary"
-                            : "text-slate-500 dark:text-slate-400"
-                        } hover:text-primary dark:hover:text-primary`}
-                        href={menu.target}
-                      >
-                        {menu.title}
-                      </Link>
-                    </li>
-                  ))}
+                  <li>
+                    <a
+                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                      href="#home"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSmoothScroll("home");
+                      }}
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                      href="#about"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSmoothScroll("about");
+                      }}
+                    >
+                      About Me
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                      href="#skills"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSmoothScroll("skills");
+                      }}
+                    >
+                      Skills
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                      href="#projects"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSmoothScroll("projects");
+                      }}
+                    >
+                      Projects
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -167,44 +211,9 @@ const Footer = () => {
         </div>
         <div className="mt-16 flex items-center justify-center border-t border-dark pt-8 dark:border-white/10 sm:mt-20 lg:mt-24">
           <p className="text-accents-300 dark:text-white/80 text-xs leading-5">
-            © Copyright 2023 - {new Date().getFullYear()} devnull. All rights
-            reserved.
+            © Copyright {new Date().getFullYear()} - Isa Iant Maulana
           </p>
         </div>
-        <p className="text-center text-xs font-medium text-accents-300 dark:text-white/80 mt-2">
-          Dibuat dengan <span className="text-pink-500">❤️</span> oleh{" "}
-          <a
-            href="https://github.com/armandwipangestu/armandwipangestu.vercel.app"
-            target="_blank"
-            className="font-bold text-primary hover:text-primary/80"
-          >
-            Arman Dwi Pangestu
-          </a>
-          , menggunakan{" "}
-          <a
-            href="https://nextjs.org"
-            target="_blank"
-            className="font-bold text-sky-500 hover:text-sky-500/80"
-          >
-            Next.js
-          </a>
-          ,{" "}
-          <a
-            href="https://tailwindcss.com"
-            target="_blank"
-            className="font-bold text-sky-500 hover:text-sky-500/80"
-          >
-            Tailwind CSS
-          </a>{" "}
-          dan{" "}
-          <a
-            href="https://www.markdownguide.org"
-            target="_blank"
-            className="font-bold text-sky-500 hover:text-sky-500/80"
-          >
-            Markdown
-          </a>
-        </p>
       </div>
     </footer>
   );
