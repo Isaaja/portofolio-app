@@ -44,7 +44,7 @@ const AboutSection = () => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 sm:mx-14 md:mx-72">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 sm:mx-14 xl:mx-72">
           {/* Education Timeline */}
           <div>
             <h4 className="flex items-center gap-2 text-xl font-semibold text-dark dark:text-white mb-6 ">

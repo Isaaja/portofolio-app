@@ -25,7 +25,10 @@ const ProjectsSection = () => {
         </div>
         <div className="grid gap-y-12 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 sm:gap-10 lg:gap-y-24 px-4">
           {portos.map((porto, index) => (
-            <div key={index} className="border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform, shadow] hover:-translate-y-1 duration-200 ease-in">
+            <div
+              key={index}
+              className="border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform, shadow] hover:-translate-y-1 duration-200 ease-in"
+            >
               <Link href={porto.link} target="_blank">
                 <div
                   data-radix-aspect-ratio-wrapper=""
@@ -43,11 +46,9 @@ const ProjectsSection = () => {
                     }}
                   >
                     <img
-                      alt=""
-                      height="360"
-                      width="640"
+                      alt={porto.alt}
                       src={porto.thubmnail}
-                      className={`transition duration-300 ease-in-out hover:scale-110 ${
+                      className={`transition w-full duration-300 ease-in-out hover:scale-110 h-52 object-cover object-center ${
                         isHoveredIndex === index ? "scale-110" : ""
                       }`}
                       onMouseEnter={() => setIsHoveredIndex(index)}

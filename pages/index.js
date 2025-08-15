@@ -65,13 +65,13 @@ const HomePage = () => {
 
   return (
     <>
-      <Metadata
+      {/* <Metadata
         title="Portofolio"
         description="Website Portofolio Dibuat Menggunakan NextJS dan TailwindCSS"
         image="/metadata/home.png"
         url=""
-      />
-
+      /> */}
+      
       <HeroSection />
       <AboutSection />
       <SkillsSection />

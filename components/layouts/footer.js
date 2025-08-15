@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import ReactTyped from "react-typed";
 
 const Footer = () => {
   const [menus, setMenus] = useState([]);
@@ -45,9 +46,12 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
         <div className="sm:grid sm:grid-cols-2 xl:gap-8">
           <div className="space-y-2">
-            <h2 className="flex h-10 shrink-0 items-center text-2xl md:text-3xl font-bold focus:outline-none dark:text-white">
-              Isa Iant Maulana
-            </h2>
+            <span className="animate-gradient-pulse from-background to-background text-foreground inline-block 1 rounded-xl bg-gradient-to-r mb-3 via-primary/10 px-4 py-1.5 tracking-tight shadow-2xl shadow-primary/[0.25] ring-2 ring-dark/70 dark:ring-white/70 sm:px-4 sm:py-3 text-2xl sm:text-3xl lg:text-4xl">
+              <h1 className="font-bold text-dark dark:text-white">
+                Isa Iant Maulana
+              </h1>
+            </span>
+
             <h2 className="flex shrink-0 items-center text-lg md:text-xl font-bold focus:outline-none dark:text-white mb-5">
               Lets Connect
             </h2>
