@@ -13,7 +13,6 @@ import {
   SiPostgresql,
   SiNodedotjs,
   SiPython,
-  SiHashicorp,
   SiJsonwebtokens,
   SiRedis,
   SiRabbitmq,
@@ -36,7 +35,7 @@ const SkillsSection = () => {
         </div>
 
         <div className="w-full pr-5">
-          <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-8 gap-4 items-center justify-center">
+          <div className="flex flex-wrap gap-4 items-center justify-center">
             {/* HTML */}
             <a
               href="https://www.w3.org/html/"
@@ -229,18 +228,6 @@ const SkillsSection = () => {
               </span>
             </a>
 
-            {/* Json Web Token */}
-            <a
-              href="https://jwt.io/"
-              target="_blank"
-              className="group mx-4 max-w-[60px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8 ease-in-out hover:scale-110"
-            >
-              <SiJsonwebtokens className="w-16 h-16" />
-              <span className="icon-skill absolute top-[5.5rem] right-[0.5rem] scale-0 rounded bg-dark text-white dark:bg-white dark:text-dark p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                Json Web Token
-              </span>
-            </a>
-
             {/* Redis */}
             <a
               href="https://redis.io/"
@@ -252,7 +239,7 @@ const SkillsSection = () => {
                 Redis
               </span>
             </a>
-            
+
             {/* RabbitMQ */}
             <a
               href="https://www.rabbitmq.com/"

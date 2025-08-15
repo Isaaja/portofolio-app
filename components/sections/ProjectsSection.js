@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { useState } from "react";
-
-const ProjectsSection = ({ portos }) => {
+import { portos } from "../utilities/data-portofolio";
+const ProjectsSection = () => {
   const [isHoveredIndex, setIsHoveredIndex] = useState(null);
 
   return (
     <section
       id="projects"
-      className="pt-36 pb-36 transition duration-300 ease-in-out dark:bg-dark"
+      className="pb-10 xl:pt-36 xl:pb-36 transition duration-300 ease-in-out dark:bg-dark"
     >
       <div className="container">
         <div className="flex flex-wrap">
@@ -25,7 +25,7 @@ const ProjectsSection = ({ portos }) => {
         </div>
         <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24 px-4">
           {portos.map((porto, index) => (
-            <div key={index}>
+            <div key={index} className="border border-black p-3 overflow-auto">
               <Link href={porto.link} target="_blank">
                 <div
                   data-radix-aspect-ratio-wrapper=""

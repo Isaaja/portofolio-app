@@ -1,23 +1,7 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-import Cors from "cors";
-
-const cors = Cors({
-  methods: ["GET"],
-});
-
-export default async function handler(req, res) {
-  cors(req, res, async () => {
-    res.status(200).json({
-      data,
-    });
-  });
-}
-
-const data = [
+export const portos = [
   {
     link: "https://github.com/armandwipangestu/magabwa",
-    thubmnail: "/images/portofolio/magabwa.png",
+    thubmnail: "/images/portofolio/foodsites/download.jpeg",
     alt: "Magabwa",
     title: "Magabwa",
     excerpt:
@@ -26,7 +10,7 @@ const data = [
   },
   {
     link: "https://github.com/armandwipangestu/magabwa",
-    thubmnail: "/images/portofolio/magabwa.png",
+    thubmnail: "/images/portofolio/",
     alt: "Magabwa",
     title: "Magabwa",
     excerpt:

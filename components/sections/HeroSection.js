@@ -123,13 +123,13 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="pt-36 pb-36 transition duration-300 ease-in-out dark:bg-dark"
+      className="pb-14 pt-24 lg:pt-20 lg:pb-36 transition duration-300 ease-in-out dark:bg-dark"
     >
       <div className="container">
         <div className="flex flex-wrap">
-          {/* Image Section */}
+          {/* Image Section (Hidden on mobile) */}
           <div className="hidden lg:block w-full self-end px-4 lg:w-1/2">
-            <div className="relative mt-10 lg:right-0 lg:mt-0">
+            <div className="relative mt-10 lg:mt-0">
               <Image
                 alt="Isa Iant Maulana"
                 src="/me.png"
@@ -143,17 +143,17 @@ const HeroSection = () => {
 
           {/* Content Section */}
           <div className="w-full self-center px-4 lg:w-1/2">
-            <div className="sm:ml-2 lg:ml-4 xl:ml-6 2xl:ml-10">
+            <div className="sm:ml-2 lg:ml-4 xl:ml-6 2xl:ml-10  lg:text-left">
               {/* Header */}
-              <h1 className="text-base font-semibold text-primary md:text-xl">
+              <h1 className="text-base sm:text-lg md:text-2xl font-semibold text-primary">
                 Hello everyone👋🏻, my name is
-                <span className="mt-1 block text-3xl font-bold text-dark dark:text-white lg:text-5xl">
+                <span className="mt-1 block text-2xl sm:text-3xl md:text-4xl font-bold text-dark dark:text-white lg:text-5xl">
                   Isa Iant Maulana
                 </span>
               </h1>
 
               {/* Typed Text */}
-              <h2 className="mb-8 mt-2 text-md md:text-lg font-medium text-accents-300 dark:text-white/80 lg:mt-3 lg:text-xl">
+              <h2 className="mb-6 mt-2 text-sm sm:text-base md:text-xl font-medium text-accents-300 dark:text-white/80">
                 I am a -{" "}
                 <ReactTyped
                   strings={typedStrings}
@@ -165,7 +165,7 @@ const HeroSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="mb-10 font-medium leading-relaxed text-accents-300 dark:text-white/80 w-3/4 text-justify">
+              <p className="mb-8 font-medium leading-relaxed text-accents-300 dark:text-white/80 text-sm sm:text-base md:w-auto md:text-xl w-full sm:w-4/5 lg:w-3/4 mx-auto lg:mx-0">
                 I'm a fullstack developer passionate about building modern web
                 applications. I enjoy learning new technologies and tackling
                 innovative challenges.
@@ -173,16 +173,14 @@ const HeroSection = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap lg:justify-start gap-2 items-center">
-                {/* Download CV Button */}
                 <Link
                   href="/Curriculum Vitae.pdf"
                   target="_blank"
-                  className="rounded-2xl w-30 bg-primary text-white dark:bg-primary dark:text-white px-5 py-2.5 text-base font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg md:px-8 md:py-3"
+                  className="rounded-2xl bg-primary md:w-40 text-white px-5 py-2 text-sm sm:text-base font-semibold transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
                 >
                   Download CV
                 </Link>
 
-                {/* Social Links */}
                 {socialLinks.map((link, index) => (
                   <SocialButton key={index} href={link.href} icon={link.icon} />
                 ))}

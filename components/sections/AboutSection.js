@@ -32,7 +32,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="pt-36 pb-36 dark:bg-dark bg-white">
+    <section id="about" className="xl:pt-36 xl:pb-36 dark:bg-dark bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mx-auto text-center mb-12">
@@ -44,10 +44,10 @@ const AboutSection = () => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 sm:bg-red-50 lg:bg-green-500">
           {/* Education Timeline */}
           <div>
-            <h4 className="flex items-center gap-2 justify-center text-xl font-semibold text-dark dark:text-white mb-6">
+            <h4 className="flex items-center gap-2 text-xl font-semibold text-dark dark:text-white mb-6 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="28"
@@ -60,7 +60,7 @@ const AboutSection = () => {
               </svg>
               Education
             </h4>
-            <div className="relative border-l-2 border-primary pl-6 space-y-8">
+            <div className="relative border-l-2 border-primary pl-6 space-y-8 justify-end ">
               {education.map((item, index) => (
                 <div key={index} className="relative">
                   <div className="absolute -left-9 w-5 h-5 bg-primary rounded-full"></div>
@@ -76,7 +76,7 @@ const AboutSection = () => {
 
           {/* Experience Timeline */}
           <div>
-            <h4 className="flex items-center gap-2 justify-center text-xl font-semibold text-dark dark:text-white mb-6">
+            <h4 className="flex items-center gap-2 text-xl font-semibold text-dark dark:text-white mb-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="28"
