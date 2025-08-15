@@ -17,15 +17,15 @@ const ProjectsSection = () => {
               <h4 className="mb-2 text-lg font-semibold uppercase text-primary">
                 Project
               </h4>
-              <h2 className="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+              <h2 className="mb-2 text-2xl font-bold text-dark dark:text-white sm:text-3xl lg:text-5xl">
                 All Projects
               </h2>
             </div>
           </div>
         </div>
-        <div className="grid gap-y-12 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:gap-x-20 lg:gap-y-24 px-4">
+        <div className="grid gap-y-12 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 sm:gap-10 lg:gap-y-24 px-4">
           {portos.map((porto, index) => (
-            <div key={index} className="border border-black p-3 overflow-auto">
+            <div key={index} className="border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform, shadow] hover:-translate-y-1 duration-200 ease-in">
               <Link href={porto.link} target="_blank">
                 <div
                   data-radix-aspect-ratio-wrapper=""
@@ -74,10 +74,10 @@ const ProjectsSection = () => {
                   {porto.excerpt}
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-x-1">
+                  <div className="flex flex-wrap  items-center gap-2">
                     {porto.techs?.map((tech, index) => (
                       <div
-                        className="inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-cyan-500 transition-colors hover:bg-cyan-500/20 focus:outline-none cursor-default"
+                        className="inline-flex items-center rounded-full border border-orange-500/40 bg-orange-500/10 px-2.5 py-0.5 text-xs font-medium tracking-tight text-orange-500 transition-colors hover:bg-orange-500/20 focus:outline-none cursor-default"
                         key={index}
                       >
                         {tech}

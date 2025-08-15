@@ -36,15 +36,15 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mx-auto text-center mb-12">
-          <h2 className="text-lg font-semibold uppercase text-primary">
+          <h2 className="text-lg md:text-xl font-semibold uppercase text-primary">
             About Me
           </h2>
-          <h3 className="mt-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+          <h3 className="mt-2 text-2xl font-bold text-dark dark:text-white sm:text-3xl lg:text-5xl">
             Get to know me better
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 sm:bg-red-50 lg:bg-green-500">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 sm:mx-14 md:mx-72">
           {/* Education Timeline */}
           <div>
             <h4 className="flex items-center gap-2 text-xl font-semibold text-dark dark:text-white mb-6 ">

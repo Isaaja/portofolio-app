@@ -1,13 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {
-  FaGithub,
-  FaGitlab,
-  FaYoutube,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-} from "react-icons/fa";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
@@ -52,12 +43,15 @@ const Footer = () => {
         ></div>
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-        <div className="xl:grid xl:grid-cols-2 xl:gap-8">
+        <div className="sm:grid sm:grid-cols-2 xl:gap-8">
           <div className="space-y-2">
-            <h2 className="flex h-10 shrink-0 items-center text-xl md:text-3xl font-bold focus:outline-none dark:text-white mb-5">
+            <h2 className="flex h-10 shrink-0 items-center text-2xl md:text-3xl font-bold focus:outline-none dark:text-white">
+              Isa Iant Maulana
+            </h2>
+            <h2 className="flex shrink-0 items-center text-lg md:text-xl font-bold focus:outline-none dark:text-white mb-5">
               Lets Connect
             </h2>
-            <h3 className="mb-2 text-lg font-bold text-accents-300 dark:text-white/80">
+            <h3 className="mb-2 text-sm font-bold text-accents-300 dark:text-white/80">
               Contact Me:
             </h3>
             <a
@@ -66,140 +60,112 @@ const Footer = () => {
             >
               <span>isaiantmaulana2004@gmail.com</span>
             </a>
-            <div className="flex gap-x-1">
-              {/* Github */}
-              <a
-                href="https://github.com/Isaaja"
-                target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
-              >
-                <FaGithub className="h-6 w-6" />
-                <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  GitHub
-                </span>
-              </a>
-
-              {/* Youtube */}
-              <a
-                href="https://www.youtube.com/@isaiantmaulana5144"
-                target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
-              >
-                <FaYoutube className="h-6 w-6" />
-                <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  YouTube
-                </span>
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="https://www.instagram.com/isaiantmaulanaa/"
-                target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
-              >
-                <FaInstagram className="h-6 w-6" />
-                <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  Instagram
-                </span>
-              </a>
-
-              {/* Linkedin */}
-              <a
-                href="https://www.linkedin.com/in/isaiantmaulana"
-                target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
-              >
-                <FaLinkedin className="h-6 w-6" />
-                <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  LinkedIn
-                </span>
-              </a>
-
-              {/* Whatsapp */}
-              <a
-                href="https://wa.me/+6285150715156"
-                target="_blank"
-                className="group mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-400 dark:border-slate-300 text-slate-400 dark:text-slate-300 hover:border-primary hover:bg-primary hover:text-white dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
-              >
-                <FaWhatsapp className="h-6 w-6" />
-                <span className="absolute mt-20 scale-0 rounded bg-primary text-white p-2 text-xs group-hover:scale-100 whitespace-normal transition duration-300 ease-in-out font-bold">
-                  Whatsapp
-                </span>
-              </a>
-            </div>
           </div>
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 xl:mt-0">
-            <div className="gap-8">
-              <div>
-                <h3 className="leading text-xl font-bold dark:text-white">
-                  Sitemap
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
-                      href="#home"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleSmoothScroll("home");
-                      }}
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
-                      href="#about"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleSmoothScroll("about");
-                      }}
-                    >
-                      About Me
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
-                      href="#skills"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleSmoothScroll("skills");
-                      }}
-                    >
-                      Skills
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
-                      href="#projects"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleSmoothScroll("projects");
-                      }}
-                    >
-                      Projects
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          <div className="mt-5 md:mt-0 grid grid-cols-2 xl:mt-0">
+            <div>
+              <h3 className="leading text-lg font-bold dark:text-white">
+                Sitemap
+              </h3>
+              <ul role="list" className="mt-1 space-y-4">
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="#home"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSmoothScroll("home");
+                    }}
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="#about"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSmoothScroll("about");
+                    }}
+                  >
+                    About Me
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="#skills"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSmoothScroll("skills");
+                    }}
+                  >
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="#projects"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSmoothScroll("projects");
+                    }}
+                  >
+                    Projects
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div className="gap-8">
-              <div>
-                <h3 className="leading text-xl font-bold dark:text-white">
-                  Tag
-                </h3>
-              </div>
+            <div>
+              <h3 className="leading text-lg font-bold dark:text-white">
+                Social Media
+              </h3>
+              <ul role="list" className="mt-1 space-y-4">
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="https://www.linkedin.com/in/isaiantmaulana/"
+                  >
+                    Linkedin
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="https://github.com/Isaaja"
+                  >
+                    Github
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="https://wa.me/+6285150715156"
+                  >
+                    Whatsapp
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`text-base leading-6 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary cursor-pointer`}
+                    href="https://www.instagram.com/isaiantmaulanaa/"
+                  >
+                    Instagram
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        {/* <div className="mt-16 flex items-center justify-center border-t border-dark pt-8 dark:border-white/10 sm:mt-20 lg:mt-24">
+        <div className="mt-16 flex items-center justify-center border-t border-dark pt-8 dark:border-white/10 sm:mt-20 lg:mt-24">
           <p className="text-accents-300 dark:text-white/80 text-xs leading-5">
             © Copyright {new Date().getFullYear()} - Isa Iant Maulana
           </p>
-        </div> */}
+        </div>
+        <p className="text-accents-300 dark:text-white/80 text-xs leading-5 text-center">
+          made with ❤️‍🩹 and wholeheartedly
+        </p>
       </div>
     </footer>
   );

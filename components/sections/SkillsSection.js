@@ -28,7 +28,7 @@ const SkillsSection = () => {
             <h4 className="mb-2 text-lg font-semibold uppercase text-primary">
               Skills
             </h4>
-            <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+            <h2 className="mb-4 text-2xl font-bold text-dark dark:text-white sm:text-3xl lg:text-5xl">
               Essensial Tools & Technologies
             </h2>
           </div>

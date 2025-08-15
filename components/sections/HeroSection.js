@@ -78,32 +78,13 @@ const socialLinks = [
 
 // Komponen untuk background pattern
 const BackgroundPattern = () => (
-  <span className="absolute bottom-20 left-72 -translate-x-1/2 md:scale-125">
-    <svg
-      width={400}
-      height={400}
-      viewBox="0 0 200 200"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g transform="translate(100 100) scale(1.1)" fill="#FF6600">
-        <rect x="-100" y="-12" width="200" height="24" rx="3" />
-        <rect
-          x="-100"
-          y="-12"
-          width="200"
-          height="24"
-          rx="3"
-          transform="rotate(45)"
-        />
-        <rect
-          x="-100"
-          y="-12"
-          width="200"
-          height="24"
-          rx="3"
-          transform="rotate(-45)"
-        />
-      </g>
+  <span className="absolute -inset-9 translate-y-14 xl:inset-5 md:translate-y-24 xl:translate-y-14 scale-125">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="#FF6600"
+        d="M45.4,-60.4C56.7,-54.3,62.2,-38.2,60.6,-24.2C59,-10.2,50.3,1.7,44.4,12.7C38.5,23.8,35.3,34.1,28.4,43.8C21.5,53.5,10.7,62.6,-2.9,66.6C-16.5,70.5,-32.9,69.2,-42,60.2C-51,51.2,-52.5,34.4,-55.2,19.5C-57.9,4.7,-61.6,-8.3,-58.5,-19.4C-55.4,-30.5,-45.5,-39.7,-34.6,-45.9C-23.7,-52.1,-11.9,-55.3,2.6,-58.9C17.1,-62.4,34.2,-66.5,45.4,-60.4Z"
+        transform="translate(100 100)"
+      />
     </svg>
   </span>
 );
@@ -123,13 +104,13 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="pb-14 pt-24 lg:pt-20 lg:pb-36 transition duration-300 ease-in-out dark:bg-dark"
+      className="pb-14 pt-9 md:pt-12 lg:pt-20 xl:pt-28 lg:pb-36transition duration-300 ease-in-out dark:bg-dark"
     >
       <div className="container">
-        <div className="flex flex-wrap">
-          {/* Image Section (Hidden on mobile) */}
-          <div className="hidden lg:block w-full self-end px-4 lg:w-1/2">
-            <div className="relative mt-10 lg:mt-0">
+        <div className="flex sm:flex-row flex-col items-center">
+          {/* Image Section */}
+          <div className="w-56 md:w-80 xl:w-1/2 pb-5 justify-center px-4 ">
+            <div className="relative mt-10 md:mt-0 ">
               <Image
                 alt="Isa Iant Maulana"
                 src="/me.png"
@@ -140,14 +121,13 @@ const HeroSection = () => {
               <BackgroundPattern />
             </div>
           </div>
-
           {/* Content Section */}
-          <div className="w-full self-center px-4 lg:w-1/2">
-            <div className="sm:ml-2 lg:ml-4 xl:ml-6 2xl:ml-10  lg:text-left">
+          <div className="w-full md:w-1/2 self-center px-4">
+            <div className="sm:ml-2 lg:ml-4 xl:ml-6 2xl:ml-10 lg:text-left">
               {/* Header */}
-              <h1 className="text-base sm:text-lg md:text-2xl font-semibold text-primary">
+              <h1 className="text-base md:text-xl font-semibold text-primary">
                 Hello everyone👋🏻, my name is
-                <span className="mt-1 block text-2xl sm:text-3xl md:text-4xl font-bold text-dark dark:text-white lg:text-5xl">
+                <span className="mt-1 block text-2xl sm:text-3xl font-bold text-dark dark:text-white lg:text-5xl">
                   Isa Iant Maulana
                 </span>
               </h1>
@@ -165,7 +145,7 @@ const HeroSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="mb-8 font-medium leading-relaxed text-accents-300 dark:text-white/80 text-sm sm:text-base md:w-auto md:text-xl w-full sm:w-4/5 lg:w-3/4 mx-auto lg:mx-0">
+              <p className="mb-8 font-medium leading-relaxed text-accents-300 dark:text-white/80 text-sm sm:text-base md:w-auto md:text-xl w-full sm:w-4/5 lg:w-3/4 mx-auto md:mx-0">
                 I'm a fullstack developer passionate about building modern web
                 applications. I enjoy learning new technologies and tackling
                 innovative challenges.
