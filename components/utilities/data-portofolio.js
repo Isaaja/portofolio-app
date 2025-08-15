@@ -11,6 +11,7 @@ export const portos = [
   },
   {
     link: "https://github.com/iWantToBeAProgrammer/movie_project",
+    website: "https://e-commerce-jack-project.vercel.app/",
     thubmnail: "/images/portofolio/image-cinematix.png",
     alt: "Cinematix",
     title: "Cinematix",
@@ -20,6 +21,7 @@ export const portos = [
   },
   {
     link: "https://github.com/hafidnrzs/foodsites",
+    website: "https://e-commerce-jack-project.vercel.app/",
     thubmnail: "/images/portofolio/image-foodsites.png",
     alt: "Foodsites",
     title: "Foodsites",
