@@ -1,4 +1,6 @@
 import Head from "next/head";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+const safeUrl = baseUrl.replace(/^https?:\/\//, "");
 
 const Metadata = ({ title, description, image, url }) => {
   return (
@@ -30,13 +32,7 @@ const Metadata = ({ title, description, image, url }) => {
 
       {/* Twitter or X Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        property="twitter:url"
-        content={`${process.env.NEXT_PUBLIC_BASE_URL.replace(
-          /^https?:\/\//,
-          ""
-        )}`}
-      />
+      <meta property="twitter:url" content={safeUrl} />
       <meta
         property="twitter:url"
         content={`${process.env.NEXT_PUBLIC_BASE_URL}`}
