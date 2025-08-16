@@ -113,7 +113,7 @@ const HeroSection = () => {
             <div className="relative mt-10 md:mt-0 ">
               <Image
                 alt="Isa Iant Maulana"
-                src="/me.png"
+                src="/me.webp"
                 className="relative z-[1] mx-auto max-w-full"
                 width={417}
                 height={598}
