@@ -1,99 +1,162 @@
-<h1 align="center">Web Portofolio</h1>
-<p align="center">Repository ini merupakan web portofolio yang saya buat menggunakan teknologi NextJS dan Tailwind CSS</p>
+# 🚀 Portfolio Website
 
-<img src="./public/metadata/home.png" alt="Portofolio" href="https://armandwipangestu.vercel.app">
+A modern, responsive portfolio website built with **Next.js** and **Tailwind CSS**. This project showcases my skills, projects, and blog posts in an elegant and professional manner.
 
-## Daftar Isi
+## ✨ Features
 
-- [Menjalankan di Localhost](#menjalankan-di-localhost)
-- [Struktur Folder dan File](#struktur-folder-dan-file)
-- [List Dynamic Routes](#list-dynamic-routes)
-- [List NextJS API](#list-nextjs-api)
+- **Responsive Design** - Optimized for all devices and screen sizes
+- **Modern UI/UX** - Clean and professional design with smooth animations
+- **Blog System** - Markdown-based blog with syntax highlighting
+- **Project Showcase** - Dynamic portfolio section featuring my projects
+- **Skills Display** - Interactive skills section with animated icons
+- **SEO Optimized** - Built-in metadata and SEO features
+- **Performance** - Fast loading with Next.js optimization
 
-## Menjalankan di Localhost
+## 🛠️ Tech Stack
 
-- Clone repository ini
+- **Framework**: Next.js 13.5.6
+- **Styling**: Tailwind CSS
+- **Icons**: FontAwesome, React Icons
+- **Animations**: Framer Motion
+- **Markdown**: Gray Matter, Marked
+- **Syntax Highlighting**: Highlight.js
+- **Analytics**: Vercel Analytics
 
-```bash
-git clone --depth=1 https://github.com/armandwipangestu/armandwipangestu.vercel.app portofolio
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/Isaaja/portofolio-app.git
+   cd portofolio-app
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Set up environment variables**
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   Add the following to your `.env.local`:
+
+   ```env
+   NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+   NEXT_PUBLIC_PUBLIC_ASSETS="$NEXT_PUBLIC_BASE_URL/images/posts/assets"
+   ```
+
+4. **Run the development server**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+portofolio-app/
+├── components/
+│   ├── layouts/          # Layout components
+│   │   ├── footer.js
+│   │   ├── layout.js
+│   │   └── navigation.js
+│   ├── sections/         # Main page sections
+│   │   ├── AboutSection.js
+│   │   ├── HeroSection.js
+│   │   ├── ProjectsSection.js
+│   │   └── SkillsSection.js
+│   ├── utilities/        # Utility components
+│   │   ├── data-portofolio.js
+│   │   ├── icon.js
+│   │   ├── JumpToTop.js
+│   │   ├── metadata.js
+│   │   └── toc.js
+│   └── ModalComponent.js
+├── pages/                # Next.js pages
+│   ├── _app.js
+│   ├── _document.js
+│   ├── index.js          # Homepage
+│   └── fonts/            # Custom fonts
+├── posts/                # Blog posts (Markdown)
+├── public/               # Static assets
+│   ├── images/
+│   │   ├── portofolio/   # Project images
+│   │   └── skills/       # Skill icons
+│   └── fonts/
+├── styles/               # Global styles
+│   └── globals.css
+└── utilities/            # Utility functions
+    └── sortPostsByDate.js
 ```
 
-- Instal dependency library
+## 🎯 Key Features
 
-```bash
-cd portofolio && yarn install
-```
+### Portfolio Projects
 
-- Copy file `.env.example` ke file `.env.local`
+- **Jack Project**: E-commerce website using React and Shopee API
+- **Cinematix**: Movie web app with ticket-style sharing features
+- **Foodsites**: SaaS platform for restaurant website building
 
-```bash
-cp .env.example .env.local
-```
+### Blog System
 
-- Isikan `.env.local`
+- Markdown-based blog posts
+- Syntax highlighting for code blocks
+- Tag-based categorization
+- Reading time estimation
 
-```bash
-NEXT_PUBLIC_BASE_URL="http://localhost:3000"
-NEXT_PUBLIC_PUBLIC_ASSETS="$NEXT_PUBLIC_BASE_URL/images/posts/assets"
-```
+### Skills Section
 
-- Menjalankan di development
+- Interactive skill icons with animations
+- Categorized by technology type
+- Responsive grid layout
 
-```bash
-yarn run dev
-```
+## 📝 Available Scripts
 
-## Struktur Folder dan File
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-```
-components
-├── article
-│  └── article.js
-├── layouts
-│  ├── footer.js
-│  ├── layout.js
-│  └── navigation.js
-└── utilities
-   ├── icon.js
-   ├── JumpToTop.js
-   ├── metadata.js
-   └── toc.js
-pages
-├── _app.js
-├── _document.js
-├── _index_default.js
-├── api
-│  ├── menu.js
-│  └── portofolio.js
-├── blog
-│  ├── posts
-│  │  ├── [slug].js
-│  │  └── index.js
-│  └── tag
-│     └── [tag].js
-├── blog.js
-├── index.js
-├── pendidikan.js
-├── pengalaman.js
-├── portofolio.js
-├── skills.js
-└── tentang-saya.js
-styles
-└── globals.css
-utilities
-└── sortPostsByDate.js
-```
+## 🌐 Deployment
 
-## List Dynamic Routes
+This project is optimized for deployment on Vercel:
 
-| File                    | Function              |
-| ----------------------- | --------------------- |
-| `/blog/tag/[tag].js`    | DynamicTagPage        |
-| `/blog/posts/[slug].js` | DynamicSinglePagePost |
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
 
-## List NextJS API
+## 📄 License
 
-| Endpoint          | Method |
-| ----------------- | ------ |
-| `/api/menu`       | GET    |
-| `/api/portofolio` | GET    |
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📞 Contact
+
+- **GitHub**: [@Isaaja](https://github.com/Isaaja)
+- **Portfolio**: [Live Demo](https://your-portfolio-url.vercel.app)
+
+---
+
+⭐ If you find this project helpful, please give it a star!
