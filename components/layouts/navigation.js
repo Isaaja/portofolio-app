@@ -10,7 +10,6 @@ const Navigation = () => {
   const [hamburger, setHamburger] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const pathName = usePathname();
 
   const fetchData = async () => {
     try {
@@ -73,6 +72,11 @@ const Navigation = () => {
   // Function to get active indicator className
   const getActiveIndicatorClassName = (sectionId) => {
     const isActive = isSectionActive(sectionId);
+    if (isMobile) {
+      return `absolute bottom-0 left-0 h-0.5 transition-all duration-300 ease-in-out ${
+        isActive ? "w-full" : "w-0"
+      }`;
+    }
     return `absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-in-out ${
       isActive ? "w-full" : "w-0"
     }`;

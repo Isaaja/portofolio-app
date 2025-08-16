@@ -4,7 +4,7 @@ const AboutSection = () => {
     {
       year: "2021 - Present",
       title: "Universitas Dian Nuswantoro",
-      desc: "Teknik Informatika - GPA 4.0",
+      desc: "Teknik Informatika - GPA 3.75",
     },
     {
       year: "2019 - 2022",
@@ -32,7 +32,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="xl:pt-36 xl:pb-36 dark:bg-dark bg-white">
+    <section id="about" className="xl:pt-36 xl:pb-36 dark:bg-dark bg-white mt-12 sm:mt-0">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mx-auto text-center mb-12">
