@@ -14,15 +14,15 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section
-      id="projects"
-      className="pb-10 xl:pt-36 xl:pb-36 transition duration-300 ease-in-out dark:bg-dark"
-    >
+    <section className="pb-10 xl:pt-36 xl:pb-36 transition duration-300 ease-in-out dark:bg-dark">
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full px-4">
             <div className="mx-auto mb-16 text-center">
-              <h4 className="mb-2 text-lg font-semibold uppercase text-primary">
+              <h4
+                className="mb-2 text-lg font-semibold uppercase text-primary"
+                id="projects"
+              >
                 Project
               </h4>
               <h2 className="mb-2 text-2xl font-bold text-dark dark:text-white sm:text-3xl lg:text-5xl">
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-y-12 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 sm:gap-10 lg:gap-y-24 px-4">
+        <div className="justify-items-center grid gap-y-12 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 sm:gap-10 lg:gap-y-24 px-4">
           {portos.map((porto, index) => (
             <div
               key={index}

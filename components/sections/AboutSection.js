@@ -32,11 +32,14 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="xl:pt-36 xl:pb-36 dark:bg-dark bg-white mt-12 sm:mt-0">
+    <section className="xl:pt-36 xl:pb-36 dark:bg-dark bg-white mt-12 sm:mt-0">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mx-auto text-center mb-12">
-          <h2 className="text-lg md:text-xl font-semibold uppercase text-primary">
+          <h2
+            className="text-lg md:text-xl font-semibold uppercase text-primary"
+            id="about"
+          >
             About Me
           </h2>
           <h3 className="mt-2 text-2xl font-bold text-dark dark:text-white sm:text-3xl lg:text-5xl">

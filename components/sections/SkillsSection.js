@@ -21,11 +21,14 @@ import { TbBrandNextjs } from "react-icons/tb";
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="pt-36 pb-36 dark:bg-dark">
+    <section className="pt-36 pb-36 dark:bg-dark">
       <div className="container">
         <div className="w-full px-4">
           <div className="mx-auto mb-16 text-center">
-            <h4 className="mb-2 text-lg font-semibold uppercase text-primary">
+            <h4
+              className="mb-2 text-lg font-semibold uppercase text-primary"
+              id="skills"
+            >
               Skills
             </h4>
             <h2 className="mb-4 text-2xl font-bold text-dark dark:text-white sm:text-3xl lg:text-5xl">
