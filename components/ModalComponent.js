@@ -60,15 +60,17 @@ const ModalComponent = ({ isOpen, onClose, project }) => {
               <div className="flex items-center justify-between mb-3 gap-2">
                 <div className="text-xl font-bold">{project.title}</div>
                 <div className="flex items-center gap-2 text-xs">
-                  <a
-                    href={project.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 bg-black text-white rounded-lg hover:bg-gray-700 transition"
-                  >
-                    <FaGlobe className="w-4" />
-                    <span>Website</span>
-                  </a>
+                  {project.website && (
+                    <a
+                      href={project.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 px-3 py-1 bg-black text-white rounded-lg hover:bg-gray-700 transition"
+                    >
+                      <FaGlobe className="w-4" />
+                      <span>Website</span>
+                    </a>
+                  )}
                   <a
                     href={project.link}
                     target="_blank"
