@@ -31,11 +31,11 @@ const ProjectsSection = () => {
             </div>
           </div>
         </div>
-        <div className="justify-items-center grid gap-y-12 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 sm:gap-10 lg:gap-y-24 px-4">
+        <div className="grid justify-center items-center gap-y-12 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3  sm:gap-10 lg:gap-y-24 px-4">
           {portos.map((porto, index) => (
             <div
               key={index}
-              className="border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform, shadow] hover:-translate-y-1 duration-200 ease-in cursor-pointer"
+              className="border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform, shadow] dark:border-white hover:-translate-y-1 duration-200 ease-in cursor-pointer"
               onClick={() => openModal(porto)}
             >
               {/* Thumbnail */}
@@ -47,7 +47,7 @@ const ProjectsSection = () => {
                 }}
               >
                 <div
-                  className="ring-border/50 overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm ring-1 ring-black dark:ring-white"
+                  className="ring-border/50 overflow-hidden rounded-[0.60rem] bg-accent font-mono text-sm ring-1 ring-black"
                   style={{ position: "absolute", inset: "0px" }}
                 >
                   <img

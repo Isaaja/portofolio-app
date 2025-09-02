@@ -65,7 +65,7 @@ const ModalComponent = ({ isOpen, onClose, project }) => {
                       href={project.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 px-3 py-1 bg-black text-white rounded-lg hover:bg-gray-700 transition"
+                      className="flex items-center gap-1 px-3 py-1 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition"
                     >
                       <FaGlobe className="w-4" />
                       <span>Website</span>
