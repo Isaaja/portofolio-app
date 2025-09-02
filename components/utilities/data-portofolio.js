@@ -78,20 +78,22 @@ export const websitePorto = [
 
 export const aiPorto = [
   {
-    link: "https://github.com/Isaaja/Project_3Dwebsite",
-    website: "https://project-3d-website.vercel.app/",
-    thubmnail: "/images/portofolio/image-brandku.webp",
-    alt: "Brandku",
-    title: "Brandku",
+    link: "https://github.com/Isaaja/STKI_Project",
+    website: "https://stki-14416-app.streamlit.app/",
+    thubmnail: "/images/portofolio/image-recommendation-system.webp",
+    alt: "Recommendation Anime",
+    title: "Recommendation Anime",
     excerpt:
-      "Brandku is an interactive 3D web application that displays various 3D products such as hats, shoes, t-shirts, and watches. This project is a portfolio/showcase website that allows users to view and interact with 3D models of various fashion items and accessories.",
+      "This application is an anime recommendation system built using the K-Nearest Neighbors (KNN) model. The application can provide anime recommendations based on user input, such as favorite anime names, genres, or ratings.",
     techs: [
-      "ReactJs",
-      "JavaScript",
-      "TailwindCSS",
-      "DaisyUi",
-      "ThreeJs",
-      "Framer Motion",
+      "Python",
+      "Streamlit",
+      "Machine Learning",
+      "Numpy",
+      "Pandas",
+      "Scipy",
+      "Joblib",
+      "Rapidfuzz",
     ],
   },
 ];
