@@ -1,4 +1,4 @@
-export const portos = [
+export const websitePorto = [
   {
     link: "https://github.com/Isaaja/E-commerce_JackProject",
     website: "https://e-commerce-jack-project.vercel.app/",
@@ -57,6 +57,26 @@ export const portos = [
       "A modern, responsive portfolio website built with Next.js and Tailwind CSS. This project showcases my skills, projects, and blog posts in an elegant and professional manner.",
     techs: ["NextJs", "TypeScript", "TailwindCSS", "DaisyUi", "Lucid Icon"],
   },
+  {
+    link: "https://github.com/Isaaja/Project_3Dwebsite",
+    website: "https://project-3d-website.vercel.app/",
+    thubmnail: "/images/portofolio/image-brandku.webp",
+    alt: "Brandku",
+    title: "Brandku",
+    excerpt:
+      "Brandku is an interactive 3D web application that displays various 3D products such as hats, shoes, t-shirts, and watches. This project is a portfolio/showcase website that allows users to view and interact with 3D models of various fashion items and accessories.",
+    techs: [
+      "ReactJs",
+      "JavaScript",
+      "TailwindCSS",
+      "DaisyUi",
+      "ThreeJs",
+      "Framer Motion",
+    ],
+  },
+];
+
+export const aiPorto = [
   {
     link: "https://github.com/Isaaja/Project_3Dwebsite",
     website: "https://project-3d-website.vercel.app/",

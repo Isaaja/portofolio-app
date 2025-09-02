@@ -42,7 +42,7 @@ const socialLinks = [
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        fill="none"
+        fill="white"
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
@@ -94,7 +94,7 @@ const SocialButton = ({ href, icon }) => (
   <Link
     href={href}
     target="_blank"
-    className="flex items-center justify-center rounded-2xl bg-dark w-10 h-10 text-white dark:bg-primary dark:text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
+    className="flex items-center justify-center rounded-2xl bg-dark w-10 h-10 text-white dark:bg-white dark:text-black transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
   >
     {icon}
   </Link>
