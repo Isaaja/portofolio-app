@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Moon, Sun } from "../utilities/icon";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const Navigation = () => {
   const [menus, setMenus] = useState([]);
@@ -170,11 +169,11 @@ const Navigation = () => {
           <nav
             className={`${hamburger ? "mt-1" : "hidden"} ${
               isMobile
-                ? "border dark:border-white/20 dark:bg-dark z-[9999]"
+                ? "dark:border-white/20 dark:bg-dark z-[9999]"
                 : ""
-            } transition duration-300 ease-in-out absolute right-0 top-full w-full max-w-full rounded-lg bg-white py-5 shadow-lg lg:static lg:flex lg:justify-center lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none`}
+            } transition duration-300 ease-in-out absolute right-0 top-full w-full max-w-full rounded-lg py-5 shadow-lg md:static md:flex md:justify-center md:max-w-full md:rounded-none md:bg-transparent md:shadow-none`}
           >
-            <ul className="block lg:flex">
+            <ul className=" md:flex">
               <a
                 href="#home"
                 onClick={() => handleNavLinkClick("home")}
@@ -212,34 +211,32 @@ const Navigation = () => {
 
           {/* Kanan - Dark Mode */}
           <div className="flex items-center gap-4">
-            {!isMobile && (
-              <label
-                htmlFor="dark-toggle"
-                className="cursor-pointer"
-                onClick={handleDarkMode}
+            <label
+              htmlFor="dark-toggle"
+              className="cursor-pointer"
+              onClick={handleDarkMode}
+            >
+              <div
+                className={`group toggle-icon rounded-full p-1 ${
+                  darkMode
+                    ? "hover:dark:bg-cyan-300/20"
+                    : "hover:bg-blue-200/60"
+                }`}
               >
-                <div
-                  className={`group toggle-icon rounded-full p-1 ${
-                    darkMode
-                      ? "hover:dark:bg-cyan-300/20"
-                      : "hover:bg-blue-200/60"
-                  }`}
-                >
-                  {darkMode ? (
-                    <Sun className="transition duration-300 ease-in-out dark:text-white" />
-                  ) : (
-                    <Moon className="transition duration-300 ease-in-out text-dark" />
-                  )}
-                </div>
-              </label>
-            )}
+                {darkMode ? (
+                  <Sun className="transition duration-300 ease-in-out dark:text-white" />
+                ) : (
+                  <Moon className="transition duration-300 ease-in-out text-dark" />
+                )}
+              </div>
+            </label>
 
             {/* Hamburger mobile */}
             <button
               id="hamburger"
               name="hamburger"
               type="button"
-              className={`block lg:hidden ${
+              className={`block sm:hidden ${
                 hamburger ? "hamburger-active" : ""
               }`}
               onClick={hamburgerToggle}
