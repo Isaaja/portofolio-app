@@ -96,7 +96,7 @@ const ModalComponent = ({ isOpen, onClose, project }) => {
                 {project.techs.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 border border-orange-500/40 bg-orange-500/10 dark:bg-gray-700 text-orange-500 transition-colors hover:bg-orange-500/20 dark:text-gray-200 text-xs rounded-full"
+                    className="px-3 py-1 border border-orange-500/40 bg-orange-500/10  text-orange-500 transition-colors hover:bg-orange-500/20 text-xs rounded-full"
                   >
                     {tech}
                   </span>
