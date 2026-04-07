@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import Metadata from "@/components/utilities/metadata";
 import React, { useEffect, useState } from "react";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
@@ -7,77 +6,99 @@ import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 
 const HomePage = () => {
-  const [portos, setPortos] = useState([]);
-  const [activeIndex, setActiveIndex] = useState(0);
+   const [portos, setPortos] = useState([]);
+   const [activeIndex, setActiveIndex] = useState(0);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/portofolio`
-      );
-      const data = await response.json();
-      setPortos(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const grayscales = document.querySelectorAll(".grayscale");
-    const iconSkills = document.querySelectorAll(".icon-skill");
-
-    const animateGrayscale = () => {
-      if (activeIndex < grayscales.length) {
-        grayscales[activeIndex].classList.remove("grayscale", "opacity-60");
-        grayscales[activeIndex].classList.add(
-          "grayscale-0",
-          "opacity-100",
-          "scale-110"
-        );
-
-        iconSkills[activeIndex].classList.remove("scale-0");
-        iconSkills[activeIndex].classList.add("scale-110");
-
-        setTimeout(() => {
-          grayscales[activeIndex].classList.remove(
-            "grayscale-0",
-            "opacity-100",
-            "scale-110"
-          );
-
-          iconSkills[activeIndex].classList.remove("scale-110");
-
-          grayscales[activeIndex].classList.add("grayscale", "opacity-60");
-          iconSkills[activeIndex].classList.add("scale-0");
-          setActiveIndex(activeIndex + 1);
-        }, 500);
-      } else {
-        setActiveIndex(0);
+   const fetchData = async () => {
+      try {
+         const response = await fetch(
+            `${process.env.NEXT_PUBLIC_BASE_URL}/api/portofolio`,
+         );
+         const data = await response.json();
+         setPortos(data.data);
+      } catch (error) {
+         console.log(error);
       }
-    };
+   };
 
-    animateGrayscale();
-  }, [activeIndex]);
+   useEffect(() => {
+      fetchData();
+   }, []);
 
-  return (
-    <>
-      {/* <Metadata
-        title="Portofolio"
-        description="Website Portofolio Dibuat Menggunakan NextJS dan TailwindCSS"
-        image="/metadata/home.png"
-        url=""
-      /> */}
-      
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection portos={portos} />
-    </>
-  );
+   useEffect(() => {
+      const items = document.querySelectorAll(".skill-item");
+
+      const animateGrayscale = () => {
+         if (items.length === 0) return;
+
+         if (activeIndex < items.length) {
+            const item = items[activeIndex];
+            const icon = item.querySelector(".skill-icon");
+            const tooltip = item.querySelector(".icon-skill");
+
+            const isHover = item.matches(":hover");
+
+            // 🔥 AKTIF (kalau TIDAK di-hover)
+            if (!isHover) {
+               item.classList.remove("grayscale-[0.6]", "opacity-90");
+               item.classList.add("grayscale-0", "opacity-100", "scale-110");
+
+               if (icon) {
+                  icon.classList.remove("grayscale-[0.6]", "opacity-90");
+                  icon.classList.add("grayscale-0", "opacity-100", "scale-110");
+               }
+
+               if (tooltip) {
+                  tooltip.classList.remove("scale-0");
+                  tooltip.classList.add("scale-110");
+               }
+            }
+
+            setTimeout(() => {
+               const isStillHover = item.matches(":hover");
+
+               // 🔁 RESET (kalau TIDAK di-hover)
+               if (!isStillHover) {
+                  item.classList.remove(
+                     "grayscale-0",
+                     "opacity-100",
+                     "scale-110",
+                  );
+                  item.classList.add("grayscale-[0.6]", "opacity-90");
+
+                  if (icon) {
+                     icon.classList.remove(
+                        "grayscale-0",
+                        "opacity-100",
+                        "scale-110",
+                     );
+                     icon.classList.add("grayscale-[0.6]", "opacity-90");
+                  }
+
+                  if (tooltip) {
+                     tooltip.classList.remove("scale-110");
+                     tooltip.classList.add("scale-0");
+                  }
+               }
+
+               setActiveIndex((prev) => prev + 1);
+            }, 700);
+         } else {
+            setActiveIndex(0);
+         }
+      };
+
+      animateGrayscale();
+   }, [activeIndex]);
+
+   return (
+      <>
+         <HeroSection />
+         <AboutSection />
+         <SkillsSection />
+         <ProjectsSection portos={portos} />
+      </>
+   );
 };
 
 export default HomePage;

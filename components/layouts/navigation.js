@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { Moon, Sun } from "../utilities/icon";
 import Link from "next/link";
-import Image from "next/image";
 
 import {
    HiOutlineHome,
@@ -115,10 +114,15 @@ const Navigation = () => {
             <div className="relative flex items-center justify-between">
                {/* Logo */}
                <div className="px-4">
-                  <Link href="/" className="block py-5">
-                     <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-white font-bold text-lg  transition-all duration-300 ease-out hover:scale-110 hover:shadow-lg  hover:shadow-primary/50 active:scale-95">
-                        |
-                     </div>
+                  <Link
+                     href="/"
+                     className="flex items-center gap-2 py-5 text-lg font-bold tracking-wide text-dark dark:text-white transition duration-300"
+                  >
+                     <HiOutlineCode className="w-6 h-6 text-primary" />
+                     <span className="relative group">
+                        Isa Iant Maulana
+                        <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                     </span>
                   </Link>
                </div>
 
