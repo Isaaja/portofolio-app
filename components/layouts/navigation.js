@@ -128,8 +128,10 @@ const Navigation = () => {
                      {NAV_ITEMS.map(({ id, label }) => (
                         <a
                            key={id}
-                           href={`#${id}`}
-                           onClick={() => handleNavLinkClick(id)}
+                           onClick={(e) => {
+                              e.preventDefault();
+                              handleNavLinkClick(id);
+                           }}
                            className={getLinkClass(id)}
                         >
                            <li>{label}</li>
@@ -177,8 +179,10 @@ const Navigation = () => {
                         {NAV_ITEMS.map(({ id, label, icon: Icon }) => (
                            <a
                               key={id}
-                              href={`#${id}`}
-                              onClick={() => handleNavLinkClick(id)}
+                              onClick={(e) => {
+                                 e.preventDefault();
+                                 handleNavLinkClick(id);
+                              }}
                               className={`group relative flex items-center gap-3 cursor-pointer rounded-xl px-4 py-3 text-base transition duration-300 ${
                                  activeSection === id
                                     ? "text-primary dark:text-primary"
