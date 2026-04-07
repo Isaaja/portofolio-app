@@ -75,7 +75,7 @@ const Navigation = () => {
       const storedTheme = localStorage.getItem("dark-mode");
       if (storedTheme !== null) setDarkMode(storedTheme === "true");
 
-      const mq = window.matchMedia("(max-width: 1023px)");
+      const mq = window.matchMedia("(max-width: 640px)");
       setIsMobile(mq.matches);
       const handleMq = (e) => setIsMobile(e.matches);
       mq.addEventListener("change", handleMq);
@@ -127,7 +127,7 @@ const Navigation = () => {
                </div>
 
                {/* Desktop menu - tengah */}
-               <nav className="hidden md:flex md:justify-center">
+               <nav className="hidden sm:flex absolute sm:left-1/3 xl:left-1/2 xl:-translate-x-1/2">
                   <ul className="flex">
                      {NAV_ITEMS.map(({ id, label }) => (
                         <a
@@ -153,7 +153,7 @@ const Navigation = () => {
                      onClick={handleDarkMode}
                   >
                      <div
-                        className={`toggle-icon rounded-full p-1 ${darkMode ? "hover:dark:bg-cyan-300/20" : "hover:bg-blue-200/60"}`}
+                        className={`toggle-icon rounded-full p-1 ${darkMode ? "hover:dark:bg-cyan-300/20" : "hover:bg-primary/20"}`}
                      >
                         {darkMode ? (
                            <Sun className="transition duration-300 ease-in-out dark:text-white" />
