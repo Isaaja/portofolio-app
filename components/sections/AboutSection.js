@@ -93,13 +93,13 @@ const AboutSection = () => {
    ];
 
    return (
-      <section className="py-20 lg:py-32 dark:bg-dark bg-white" id="about">
+      <section className="py-20 lg:py-32 dark:bg-dark bg-white">
          <div className="container mx-auto px-6 lg:px-8">
             {/* Header Section */}
             <div className="mx-auto mb-16 text-center">
                <h4
                   className="mb-2 text-lg font-semibold uppercase text-primary"
-                  id="projects"
+                  id="about"
                >
                   About Me
                </h4>
@@ -133,7 +133,7 @@ const AboutSection = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                      {education.map((item, index) => (
                         <div key={index} className="group">
-                           <div className="relative p-6 rounded-2xl bg-white dark:bg-accent border border-gray-200 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 h-full">
+                           <div className="relative p-6 rounded-2xl bg-white hover:-translate-y-1  dark:bg-accent border border-gray-200 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 h-full">
                               {/* Status Badge */}
                               <div className="flex items-start justify-between mb-4">
                                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
@@ -151,7 +151,7 @@ const AboutSection = () => {
                               </div>
 
                               {/* Institution Name */}
-                              <h4 className="text-xl font-bold text-dark dark:text-white mb-1 group-hover:text-primary transition-colors">
+                              <h4 className="text-xl font-bold text-dark dark:text-white mb-1  transition-colors">
                                  {item.title}
                               </h4>
 
@@ -223,14 +223,13 @@ const AboutSection = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                      {experience.map((item, index) => (
                         <div key={index} className="group h-full">
-                           {/* Tambah flex flex-col h-full agar tech stack bisa di-push ke bawah */}
-                           <div className="flex flex-col p-6 rounded-2xl bg-white dark:bg-accent border border-gray-200 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 h-full">
+                           <div className="flex flex-col p-6 rounded-2xl hover:-translate-y-1 bg-white dark:bg-accent border border-gray-200 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 h-full">
                               <div className="flex items-start justify-between mb-3">
                                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
                                     {item.year}
                                  </span>
                               </div>
-                              <h4 className="text-lg font-bold text-dark dark:text-white mb-1 group-hover:text-primary transition-colors">
+                              <h4 className="text-lg font-bold text-dark dark:text-white mb-1 transition-colors">
                                  {item.title}
                               </h4>
                               <p className="text-primary font-medium text-sm mb-3">
