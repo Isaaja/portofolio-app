@@ -9,22 +9,6 @@ const HomePage = () => {
    const [portos, setPortos] = useState([]);
    const [activeIndex, setActiveIndex] = useState(0);
 
-   const fetchData = async () => {
-      try {
-         const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/api/portofolio`,
-         );
-         const data = await response.json();
-         setPortos(data.data);
-      } catch (error) {
-         console.log(error);
-      }
-   };
-
-   useEffect(() => {
-      fetchData();
-   }, []);
-
    useEffect(() => {
       const items = document.querySelectorAll(".skill-item");
 

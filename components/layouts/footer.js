@@ -1,23 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import ReactTyped from "react-typed";
+import React from "react";
 
 const Footer = () => {
-   const [menus, setMenus] = useState([]);
-   const pathName = usePathname();
-
-   const fetchData = async () => {
-      try {
-         const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/api/menu`,
-         );
-         const data = await response.json();
-         setMenus(data.data);
-      } catch (error) {
-         console.log(error);
-      }
-   };
-
    const handleSmoothScroll = (sectionId) => {
       const targetSection = document.getElementById(sectionId);
       if (targetSection) {
@@ -27,10 +10,6 @@ const Footer = () => {
          });
       }
    };
-
-   useEffect(() => {
-      fetchData();
-   });
 
    return (
       <footer className="relative w-full border-t border-dark/20 dark:border-white/20 pt-12 transition duration-300 ease-in-out dark:bg-dark dark:opacity-90 lg:pt-20">
