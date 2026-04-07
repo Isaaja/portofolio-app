@@ -53,22 +53,22 @@ const Navigation = () => {
          : `${base} text-accents-300 dark:text-slate-400 hover:text-primary dark:hover:text-primary`;
    };
 
- const getIndicatorClass = (id) => {
-    if (isMobile) {
-       return `absolute inset-0 rounded-full transition-all duration-300 ease-in-out ${
-          activeSection === id
-             ? "bg-primary/10 dark:bg-primary/15 opacity-100"
-             : "bg-primary/10 dark:bg-primary/15 opacity-0 group-hover:opacity-60"
-       }`;
-    }
+   const getIndicatorClass = (id) => {
+      if (isMobile) {
+         return `absolute inset-0 rounded-full transition-all duration-300 ease-in-out ${
+            activeSection === id
+               ? "bg-primary/10 dark:bg-primary/15 opacity-100"
+               : "bg-primary/10 dark:bg-primary/15 opacity-0 group-hover:opacity-60"
+         }`;
+      }
 
-    // Desktop - aktif + hover underline
-    return `absolute left-0 -bottom-1 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
-       activeSection === id
-          ? "w-full" // selalu tampil kalau aktif
-          : "w-0 group-hover:w-full" // muncul saat hover
-    }`;
- };
+      // Desktop - aktif + hover underline
+      return `absolute left-0 -bottom-1 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
+         activeSection === id
+            ? "w-full" // selalu tampil kalau aktif
+            : "w-0 group-hover:w-full" // muncul saat hover
+      }`;
+   };
    useEffect(() => {
       document.querySelector("html").classList.toggle("dark", darkMode);
    }, [darkMode]);
@@ -118,7 +118,14 @@ const Navigation = () => {
                <div className="px-4">
                   <Link
                      href="/"
-                     className="flex items-center gap-2 py-5 text-lg font-bold tracking-wide text-dark dark:text-white transition duration-300"
+                     onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({
+                           top: 0,
+                           behavior: "smooth",
+                        });
+                     }}
+                     className="flex items-center gap-2 py-5 text-lg font-bold tracking-wide text-dark dark:text-white transition duration-700"
                   >
                      <HiOutlineCode className="w-6 h-6 text-primary" />
                      <span className="relative group">
