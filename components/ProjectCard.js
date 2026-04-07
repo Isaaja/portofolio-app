@@ -6,7 +6,7 @@ const ProjectCard = ({ porto, index, onOpen }) => {
 
    return (
       <div
-         className="border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform,shadow] dark:border-white hover:-translate-y-1 duration-200 ease-in cursor-pointer"
+         className="group border border-black p-3 overflow-auto rounded-lg shadow hover:shadow-lg transition-[transform,shadow] dark:border-white hover:-translate-y-1 duration-200 ease-in cursor-pointer"
          onClick={() => onOpen(porto)}
       >
          <div
@@ -23,7 +23,7 @@ const ProjectCard = ({ porto, index, onOpen }) => {
                <img
                   alt={porto.alt}
                   src={porto.thubmnail}
-                  className={`transition w-full duration-300 ease-in-out hover:scale-110 h-52 object-cover object-center ${hovered ? "scale-110" : ""}`}
+                  className="w-full h-52 object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-110"
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
                />

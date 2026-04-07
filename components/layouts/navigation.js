@@ -46,27 +46,29 @@ const Navigation = () => {
             : `${base} text-accents-300 dark:text-slate-400 hover:text-primary dark:hover:text-primary`;
       }
 
-      // Desktop - kembalikan seperti semula
-      const base = `group mx-2 flex cursor-pointer rounded-full px-4 py-2 text-base transition duration-300 relative`;
+      const base = `group relative mx-2 flex cursor-pointer px-4 py-2 text-base transition duration-300`;
+
       return activeSection === id
          ? `${base} text-primary dark:text-primary`
-         : `${base} hover:text-orange-400 hover:dark:bg-cyan-300/20 hover:dark:text-cyan-600 text-accents-300 dark:text-slate-400`;
+         : `${base} text-accents-300 dark:text-slate-400 hover:text-primary dark:hover:text-primary`;
    };
 
-   const getIndicatorClass = (id) => {
-      if (isMobile) {
-         return `absolute inset-0 rounded-full transition-all duration-300 ease-in-out ${
-            activeSection === id
-               ? "bg-primary/10 dark:bg-primary/15 opacity-100"
-               : "bg-primary/10 dark:bg-primary/15 opacity-0 group-hover:opacity-60"
-         }`;
-      }
+ const getIndicatorClass = (id) => {
+    if (isMobile) {
+       return `absolute inset-0 rounded-full transition-all duration-300 ease-in-out ${
+          activeSection === id
+             ? "bg-primary/10 dark:bg-primary/15 opacity-100"
+             : "bg-primary/10 dark:bg-primary/15 opacity-0 group-hover:opacity-60"
+       }`;
+    }
 
-      // Desktop - kembalikan seperti semula
-      return `absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-in-out ${
-         activeSection === id ? "w-full" : "w-0"
-      }`;
-   };
+    // Desktop - aktif + hover underline
+    return `absolute left-0 -bottom-1 h-[2px] bg-primary transition-all duration-300 ease-in-out ${
+       activeSection === id
+          ? "w-full" // selalu tampil kalau aktif
+          : "w-0 group-hover:w-full" // muncul saat hover
+    }`;
+ };
    useEffect(() => {
       document.querySelector("html").classList.toggle("dark", darkMode);
    }, [darkMode]);
@@ -153,7 +155,7 @@ const Navigation = () => {
                      onClick={handleDarkMode}
                   >
                      <div
-                        className={`toggle-icon rounded-full p-1 ${darkMode ? "hover:dark:bg-cyan-300/20" : "hover:bg-primary/20"}`}
+                        className={`toggle-icon rounded-full p-1 w-10 justify-items-center hover:bg-primary/20 `}
                      >
                         {darkMode ? (
                            <Sun className="transition duration-300 ease-in-out dark:text-white" />
