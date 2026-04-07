@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Moon, Sun } from "../utilities/icon";
 import Link from "next/link";
+import Image from "next/image";
 
 import {
    HiOutlineHome,
@@ -114,11 +115,11 @@ const Navigation = () => {
             <div className="relative flex items-center justify-between">
                {/* Logo */}
                <div className="px-4">
-                  <Link
+               <Link
                      href="/"
-                     className="block py-5 text-lg font-bold lowercase text-dark dark:text-white"
+                     className="block py-5 text-lg font-bold text-dark dark:text-white"
                   >
-                     Isa
+                     Isa Iant Maulana
                   </Link>
                </div>
 
